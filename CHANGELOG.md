@@ -1,5 +1,73 @@
 # Versions
 
+## v6.2.41
+
+* Fix Skad issue
+
+## v6.2.4
+
+* RD-59026 - iOS SDK Version - 6.2.4
+
+## v6.2.3
+
+* RD-54266 - iOS SDK Version - 6.2.3
+
+## v6.2.2
+
+* RD-54266 - iOS SDK Version - 6.2.2
+* RD-54266 - Android SDK Version - 6.2.0
+
+## v6.2.0
+
+* RD-55161 - Fixed don't call start before startSDK() (iOS) 
+* RD-55566 - Fix onAppOpenAttribution called from kill for swizziling class (iOS)
+* RD-45032 - Send reponse code in Purchase Validation Error (iOS) 
+* RD-54266 - iOS SDK Version - 6.2.0
+* RD-54266 - Android SDK Version - 6.1.4
+
+## v6.1.4
+
+* RD-55566 - Fix onAppOpenAttribution called from kill
+
+## v6.1.3
+
+* RD-50954 - Added Unified Deep Linking API
+* RD-54264 - Added addPushNotificationDeepLinkPath api for iOS & Android
+* RD-54266 - iOS SDK Version - 6.1.3
+* RD-54266 - Android SDK Version - 6.1.3
+
+## v6.1.0
+
+* iOS SDK Version - 6.1.1
+* Android SDK Version - 6.1.0
+* Added onRequestResponse and onInAppResponse events.
+
+## v6.0.7
+
+* RD-49435 - ios swizzle options fix
+* iOS SDK Version - 6.0.7
+
+
+## v6.0.6
+
+* RD-48888 - continueUserActivity remove super call
+* RD-48915 - AppsFlyer+AppController update to lastest version
+
+## v6.0.5
+
+* iOS SDK Version - 6.0.5
+
+
+## 6.0.3
+
+* RD-44538 - empty game object fix
+* Added disableSKAdNetwork api
+* Added waitForATTUserAuthorizationWithTimeoutInterval api
+* Update android [installreferrer](https://mvnrepository.com/artifact/com.android.installreferrer/installreferrer) to 2.1 
+* Android SDK Version - 5.4.3
+* iOS SDK Version - 6.0.3
+
+
 ## 5.4.2
 
 * RD-43178 - added setSharingFilterForAllPartners() api

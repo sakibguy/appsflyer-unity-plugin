@@ -2,6 +2,10 @@
 
 # appsflyer-unity-plugin
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![GitHub tag](https://img.shields.io/github/v/release/AppsFlyerSDK/appsflyer-unity-plugin)](https://img.shields.io/github/v/release/AppsFlyerSDK/appsflyer-unity-plugin)
+
+
 🛠 In order for us to provide optimal support, we would kindly ask you to submit any issues to support@appsflyer.com
 
 > *When submitting an issue please specify your AppsFlyer sign-up (account) email , your app ID , production steps, logs, code snippets and any additional relevant information.*
@@ -17,19 +21,11 @@
 
 <hr/>
 
-## <a id="migration"> ⏩ Migration 
-  
-Migrating from the old plugin? (version V4) <br/>
-View the migration docs [here](/docs/MigrationGuide.md).
-
-⚠️ There are **breaking** changes when migrating to `Unity v5`. This includes new API, different class/package names, and the removal of `com.appsflyer.GetDeepLinkingActivity`.
-
-<hr/>
 
 ### <a id="plugin-build-for"> This plugin is built for
 
-- Android AppsFlyer SDK **v5.4.1** 
-- iOS AppsFlyer SDK **v5.4.1**
+- Android AppsFlyer SDK **v6.2.0** 
+- iOS AppsFlyer SDK **v6.2.4**
 
 
 
@@ -83,7 +79,6 @@ public class AppsFlyerObjectScript : MonoBehaviour
 
  ## <a id="guides"> 📖 Guides
 
-Installation and setup guides can be viewed [here](/docs/Guides.md).
 
 - [Installation](/docs/Installation.md)
 - [Init SDK](/docs/Guides.md#init-sdk)
@@ -95,4 +90,13 @@ Installation and setup guides can be viewed [here](/docs/Guides.md).
 ## <a id="api"> 📑 API
   
 See the full [API](/docs/API.md) available for this plugin.
+
+## <a id="migration"> ⏩ Migration 
+  
+Migrating from the old plugin? (version V4) <br/>
+View the migration docs [here](/docs/MigrationGuide.md).
+
+⚠️ There are **breaking** changes when migrating to `Unity v5`. This includes new API, different class/package names, and the removal of `com.appsflyer.GetDeepLinkingActivity`.
+
+
 
