@@ -11,6 +11,7 @@
 > *When submitting an issue please specify your AppsFlyer sign-up (account) email , your app ID , production steps, logs, code snippets and any additional relevant information.*
 
 ## Table of content
+- [Breaking changes 6.3.0](#breaking-changes) 
 - [Migration from older plugin versions](#migration) 
 - [Adding the SDK to your project](#add-sdk-to-project)
 - [Initializing the SDK](#init-sdk)
@@ -24,19 +25,50 @@
 
 ### <a id="plugin-build-for"> This plugin is built for
 
-- Android AppsFlyer SDK **v6.2.0** 
-- iOS AppsFlyer SDK **v6.2.4**
+- Android AppsFlyer SDK **v6.3.0** 
+- iOS AppsFlyer SDK **v6.3.0**
 
+## <a id="breaking-changes"> 	❗❗ Breaking changes when updating to 6.3.0 ❗❗
 
+- 6.3.0 supports Universal Windows Platform. As part of this update, the AppsFlyerObjectScript changes to include the app_id for your UWP app. If you made changes to this file, please merge them with the new AppsFlyerObjectScript.
+Please also note that you can leave the uwp app id field empty. 
+
+- From version `6.3.0`, we use `xcframework` for iOS platform, then you need to use cocoapods version >= 1.10
 
 ## <a id="add-sdk-to-project"> 📲 Adding the SDK to your project
 
+**Using unitypackage:**
 1. Clone / download this repository.
 2. [Import](https://docs.unity3d.com/Manual/AssetPackages.html) the appsflyer-unity-plugin-*.unitypackage into your Unity project.
 3. Go to Assets >> Import Package >> Custom Package.
 4. Select the appsflyer-unity-plugin-*.unitypackage file.
 
 > **Note:** The plugin uses the [The External Dependency Manager for Unity](https://github.com/googlesamples/unity-jar-resolver) (EDM4U) (formerly Play Services Resolver / Jar Resolver). If you do not want to use EDM4U see the [Installation guide](/docs/Installation.md) for more details.
+
+**Using Unity Package Manager:**
+1. Go to your packages folder, and open `manifest.json` 
+2. Add Google game package registery fpr the external dependency Manager. 
+```
+  "scopedRegistries": [
+    {
+      "name": "Game Package Registry by Google",
+      "url": "https://unityregistry-pa.googleapis.com",
+      "scopes": [
+        "com.google"
+      ]
+    }
+  ]
+```
+
+4. Add appsflyer-unity-plugin in the dependency :
+Add this line for the regular mode
+```
+ "appsflyer-unity-plugin": "https://github.com/AppsFlyerSDK/appsflyer-unity-plugin.git#upm"
+```
+ Or this line for Strict mode :
+```
+ "appsflyer-unity-plugin": "https://github.com/AppsFlyerSDK/appsflyer-unity-plugin.git#Strict-upm"
+```
 
 
 ## <a id="init-sdk"> 🚀 Initializing the SDK

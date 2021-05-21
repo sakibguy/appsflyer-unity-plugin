@@ -1,5 +1,33 @@
 # Versions
 
+## v6.3.0
+* Support for UWP
+* Update iOS SDK version - 6.3.0
+* Update Android SDK version - 6.3.0
+
+## v6.2.63
+* fix swizzling DDL
+
+## v6.2.62
+
+* fix setOneLinkCustomDomains API
+* fix swizzling
+
+## v6.2.61
+
+* Fix android dependency
+
+## v6.2.6
+
+* Update iOS SDK version - 6.2.6
+* Update Android SDK version - 6.2.3
+
+## v6.2.5
+
+* Update iOS SDK version - 6.2.5
+* Deprecated setShouldCollectDeviceName
+* AttributionObject to handle DeepLink
+
 ## v6.2.41
 
 * Fix Skad issue

@@ -19,6 +19,8 @@ extern "C" {
     const void _startSDK(bool shouldCallback, const char* objectName) {
         startRequestObjectName = stringFromChar(objectName);
         AppsFlyeriOSWarpper.didCallStart = YES;
+        [AppsFlyerAttribution shared].isBridgeReady = YES;
+        [[NSNotificationCenter defaultCenter] postNotificationName:AF_BRIDGE_SET object: [AppsFlyerAttribution shared]];
         [[AppsFlyerLib shared] startWithCompletionHandler:^(NSDictionary<NSString *,id> *dictionary, NSError *error) {
             if(shouldCallback){
                 if (error) {
@@ -94,7 +96,7 @@ extern "C" {
 
     const void _setOneLinkCustomDomains (int length, const char **oneLinkCustomDomains) {
         if(length > 0 && oneLinkCustomDomains) {
-            [[AppsFlyerLib shared] setResolveDeepLinkURLs:NSArrayFromCArray(length, oneLinkCustomDomains)];
+            [[AppsFlyerLib shared] setOneLinkCustomDomains:NSArrayFromCArray(length, oneLinkCustomDomains)];
         }
     }
 
